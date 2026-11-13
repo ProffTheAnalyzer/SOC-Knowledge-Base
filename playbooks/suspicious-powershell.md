@@ -26,6 +26,11 @@ PowerShell execution with unusual parentage, hidden or encoded arguments, script
 
 System administrators, endpoint management agents, signed automation and application installers may use PowerShell and even encoded commands. One flag is insufficient to classify a process as malicious.
 
+## Related hunting queries
+
+- [Encoded-command PowerShell activity](https://github.com/ProffTheAnalyzer/SOC-Detection-Engineering/blob/main/detection-rules/defender-powershell-encoded-command.md)
+- [PowerShell downloading content](https://github.com/ProffTheAnalyzer/SOC-Detection-Engineering/blob/main/detection-rules/defender-powershell-downloading-content.md)
+
 ## Outcome
 
 Document confidence, observed behavior, affected scope and investigative gaps. Escalate based on corroborating actions such as persistence, credential access, lateral movement or payload delivery.

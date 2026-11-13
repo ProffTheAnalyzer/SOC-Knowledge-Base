@@ -37,9 +37,10 @@ I may revisit, expand, and update topics as I gain new insights and experience.
 | [Potential ransomware precursors](playbooks/possible-ransomware-precursors.md) | Staging, remote execution or file impact |
 | [Investigation template](playbooks/PLAYBOOK_TEMPLATE.md) | Reusable case workflow |
 
-## Related project
+## Related projects
 
 - [SOC Lab](https://github.com/ProffTheAnalyzer/Ebenezer-SOC-Lab) — hands-on security platform deployment, logging and automation.
+- [SOC Detection Engineering](https://github.com/ProffTheAnalyzer/SOC-Detection-Engineering) — KQL hunting queries and investigation walkthroughs for Microsoft Sentinel and Defender XDR.
 
 ## Using the library
 
