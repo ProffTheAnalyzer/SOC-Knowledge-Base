@@ -16,6 +16,7 @@ I may revisit, expand, and update topics as I gain new insights and experience.
 | [SOC Investigation Playbooks](playbooks/README.md) | Repeatable investigation workflows and evidence collection |
 | [Event Telemetry Matrix](references/event-telemetry-matrix.md) | Event providers, collection prerequisites and interpretation |
 | [Technical References](references/README.md) | Primary documentation and technical validation guidance |
+| [Networking, DNS and C2 Reference](references/networking-dns-http-c2.md) | DMZ, network flows, DNS/TTL, HTTP, proxies, C2 beaconing, air gaps and XOR |
 
 ## Behavioral analysis
 

@@ -22,6 +22,8 @@ Use primary documentation to verify platform behavior, event semantics, schemas 
 
 [Event and telemetry matrix](event-telemetry-matrix.md) — event IDs, providers, prerequisites and common interpretation pitfalls.
 
+[Network architecture, DNS, HTTP and C2 investigation](networking-dns-http-c2.md) — DMZ, network flows, DNS/TTL, proxy visibility, HTTP methods/statuses, beaconing, defensive blocks, air gaps and XOR.
+
 ---
 
 **[Cyber Profezzor — YouTube Channel](https://www.youtube.com/@thecyberprofezzor)**  

@@ -48,6 +48,8 @@
 4. Scope number of machines/shares impacted and the user's access rights.
 5. Apply response playbook based on observed impact and authorization.
 
+Further reading: [Network architecture, DNS, HTTP and C2 investigation reference](../references/networking-dns-http-c2.md).
+
 See: [phishing playbook](../playbooks/phishing-url-triage.md), [ransomware-precursor playbook](../playbooks/possible-ransomware-precursors.md), [MITRE ATT&CK](https://attack.mitre.org/), [Microsoft Defender hunting tables](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables).
 
 ---

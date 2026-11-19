@@ -381,6 +381,8 @@ For filename/path deception and anti-forensics, cross-reference **06**; for netw
 
 Obfuscation can hide scripts, content, filenames and paths using encoding, packing, archives, alternate extensions or 8.3 names. Legitimate software uses these mechanisms too. Decode for inspection, identify file format, trace launcher and subsequent activity. Timestomping hypotheses require comparison of independent timestamps and filesystem evidence.
 
+**XOR:** Exclusive OR is a bitwise operation returning 1 when two compared bits differ. Analysts may encounter it in encoded strings or malware obfuscation; XOR by itself is not malicious and repeating-key XOR is not strong encryption. The expression `(data XOR key) XOR key = data` shows why the same key can reverse the transformation. See [network and C2 investigation reference](../references/networking-dns-http-c2.md#xor-in-security-analysis).
+
 </details>
 
 
@@ -507,6 +509,8 @@ References: [Cobalt Strike named-pipe defaults](https://www.cobaltstrike.com/blo
 
 Tunneling encapsulates traffic in another transport; SOCKS proxies relay connections; reverse connections may permit inbound-style access through an outbound channel. Named pipes and loopback can connect local components. Examine listening/connecting processes, direction, destination and remote endpoint. 127.0.0.1 is local loopback, not proof of external C2.
 
+**Network boundaries:** A DMZ separates selected exposed services from more sensitive systems; it is not proof that all internal systems are reachable. Connections can be described as source IP:port → destination IP:port plus protocol. TCP/UDP port numbers range from 0–65535, with 0 generally reserved. Air-gapped environments intentionally lack direct network connectivity, though removable media and controlled one-way transfers can still introduce risks. See [network and C2 investigation reference](../references/networking-dns-http-c2.md).
+
 </details>
 
 
@@ -517,6 +521,8 @@ Tunneling encapsulates traffic in another transport; SOCKS proxies relay connect
 
 DNS queries, TLS fingerprints such as JA3, and HTTP methods/paths/statuses can inform hypotheses. Fingerprints can be shared or modified. Compare periodicity, jitter, process, domain and byte counts with legitimate schedules. HTTP 200 does not prove successful exploitation; failed requests do not exclude attempted exploitation.
 
+**DNS:** A and AAAA records map hostnames to IP addresses; MX identifies mail routing; CNAME aliases hostnames. TTL (e.g., 300 seconds) controls how long resolvers may cache answers. A DNS query indicates name-resolution activity, not proof of connection or user intent. **HTTP/proxy:** GET retrieves, POST submits, PUT replaces and DELETE requests deletion; 200 means an HTTP request succeeded, 301/302 redirects, 403 forbidden, 404 not found, and 500 a server error. HTTPS proxy logs may expose full URLs only if TLS is decrypted or terminated. **C2:** Repeated requests to endpoints that resemble `/api/v1/status` may suggest beaconing only with corroborating process, destination, timing and network evidence. Neither `.xyz` domains nor port 443 alone prove malicious activity. See the [network and C2 investigation reference](../references/networking-dns-http-c2.md).
+
 </details>
 
 
@@ -526,6 +532,8 @@ DNS queries, TLS fingerprints such as JA3, and HTTP methods/paths/statuses can i
 <summary>Full details</summary>
 
 Cloud sync and transfer tools, including rclone, support legitimate backup and collaboration as well as unauthorized transfer. Verify file selection/staging, actor, process, destination, authorization and outbound byte counts. A tool's presence is not proof of exfiltration.
+
+**C2 blocking and egress:** DNS, firewall and proxy controls can block domains, destination IPs or visible URL patterns, but each has blind spots such as cached answers, changing infrastructure, shared IPs and encrypted paths. Verify controls actually applied and correlate with endpoint containment when authorized. See [network and C2 investigation reference](../references/networking-dns-http-c2.md#blocking-suspicious-communications).
 
 </details>
 
