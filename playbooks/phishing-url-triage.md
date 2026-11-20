@@ -24,7 +24,7 @@
 ## Close-out
 Record evidence, affected users, disposition, confidence, actions, and any follow-up monitoring.
 
-Related: [master reference — threat intelligence and SOC operations](../notes/SOC_Master_Notebook_Clean.md#13-threat-intelligence-and-soc-operations).
+Related: [master reference — threat intelligence and SOC operations](../notes/SOC_Master_Notebook_Clean.md#13-threat-intelligence-and-soc-operations) and [KQL phishing email / proxy correlation examples](https://github.com/ProffTheAnalyzer/SOC-Detection-Engineering/blob/main/kql-reference/phishing-correlation.md).
 
 ---
 
